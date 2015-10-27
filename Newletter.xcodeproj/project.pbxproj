@@ -14,6 +14,9 @@
 		5C9993BB1BCEEBDC00938E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C9993B91BCEEBDC00938E23 /* LaunchScreen.storyboard */; };
 		5C9993C61BCEEBDC00938E23 /* NewletterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9993C51BCEEBDC00938E23 /* NewletterTests.swift */; };
 		5C9993D11BCEEBDC00938E23 /* NewletterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9993D01BCEEBDC00938E23 /* NewletterUITests.swift */; };
+		5C9993DF1BCEF14600938E23 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9993DE1BCEF14600938E23 /* Alamofire.framework */; };
+		5C9993E11BCEF31300938E23 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9993E01BCEF31300938E23 /* SwiftyJSON.framework */; };
+		BC438B192537937D9D06B97E /* Pods_Newletter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DCE8C12158E028BBE227F0 /* Pods_Newletter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27DCE8C12158E028BBE227F0 /* Pods_Newletter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newletter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE0AAF63D2B8178685F83E8 /* Pods-Newletter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newletter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newletter/Pods-Newletter.release.xcconfig"; sourceTree = "<group>"; };
 		5C9993AD1BCEEBDC00938E23 /* Newletter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newletter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9993B01BCEEBDC00938E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C9993B21BCEEBDC00938E23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 		5C9993CC1BCEEBDC00938E23 /* NewletterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewletterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9993D01BCEEBDC00938E23 /* NewletterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewletterUITests.swift; sourceTree = "<group>"; };
 		5C9993D21BCEEBDC00938E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9993DE1BCEF14600938E23 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		5C9993E01BCEF31300938E23 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		65B9599CE3293B7C0F309F1F /* Pods-Newletter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newletter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newletter/Pods-Newletter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9993E11BCEF31300938E23 /* SwiftyJSON.framework in Frameworks */,
+				5C9993DF1BCEF14600938E23 /* Alamofire.framework in Frameworks */,
+				BC438B192537937D9D06B97E /* Pods_Newletter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		484D386BB307F4BE30BD3036 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65B9599CE3293B7C0F309F1F /* Pods-Newletter.debug.xcconfig */,
+				4FE0AAF63D2B8178685F83E8 /* Pods-Newletter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5C9993A41BCEEBDC00938E23 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,8 @@
 				5C9993C41BCEEBDC00938E23 /* NewletterTests */,
 				5C9993CF1BCEEBDC00938E23 /* NewletterUITests */,
 				5C9993AE1BCEEBDC00938E23 /* Products */,
+				484D386BB307F4BE30BD3036 /* Pods */,
+				98D0910EEA1F433D9B681974 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +147,16 @@
 			path = NewletterUITests;
 			sourceTree = "<group>";
 		};
+		98D0910EEA1F433D9B681974 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C9993E01BCEF31300938E23 /* SwiftyJSON.framework */,
+				5C9993DE1BCEF14600938E23 /* Alamofire.framework */,
+				27DCE8C12158E028BBE227F0 /* Pods_Newletter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C9993D51BCEEBDC00938E23 /* Build configuration list for PBXNativeTarget "Newletter" */;
 			buildPhases = (
+				844009E17BFB7B501712A71F /* Check Pods Manifest.lock */,
 				5C9993A91BCEEBDC00938E23 /* Sources */,
 				5C9993AA1BCEEBDC00938E23 /* Frameworks */,
 				5C9993AB1BCEEBDC00938E23 /* Resources */,
+				A71BFA3C87F7731693F4F53B /* Embed Pods Frameworks */,
+				6C5276E71612B9032A021AB6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +284,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C5276E71612B9032A021AB6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Newletter/Pods-Newletter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		844009E17BFB7B501712A71F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A71BFA3C87F7731693F4F53B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Newletter/Pods-Newletter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C9993A91BCEEBDC00938E23 /* Sources */ = {
@@ -394,8 +477,13 @@
 		};
 		5C9993D61BCEEBDC00938E23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B9599CE3293B7C0F309F1F /* Pods-Newletter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Newletter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ltlcreation.Newletter;
@@ -405,8 +493,13 @@
 		};
 		5C9993D71BCEEBDC00938E23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE0AAF63D2B8178685F83E8 /* Pods-Newletter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Newletter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ltlcreation.Newletter;
@@ -481,6 +574,7 @@
 				5C9993D71BCEEBDC00938E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C9993D81BCEEBDC00938E23 /* Build configuration list for PBXNativeTarget "NewletterTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +583,7 @@
 				5C9993DA1BCEEBDC00938E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C9993DB1BCEEBDC00938E23 /* Build configuration list for PBXNativeTarget "NewletterUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +592,7 @@
 				5C9993DD1BCEEBDC00938E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
