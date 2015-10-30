@@ -34,6 +34,9 @@
                             <constraint firstItem="ARl-dx-dBz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="pmW-Qk-Qnl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="ARl-dx-dBz" id="o2N-mr-KfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

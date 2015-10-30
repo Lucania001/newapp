@@ -15,34 +15,127 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource{
     
+    @IBOutlet weak var tableview: UITableView!
+    var articles = [Article]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //get data from network call
+        loaddata()
+     
+        //end view did load
+    }
+    
+    func loaddata(){
+        
+        Alamofire.request(.GET, "http://178.62.83.50/article.json")
+            .responseJSON { response in
+                // print(response.request)  // original URL request
+                // print(response.response) // URL response
+                //print(response.data)     // server data
+                //print(response.result)   // result of response serialization
+                
+                /*if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+                }*/
+                
+                //get json from response data
+                let json = JSON(data: response.data!)
+                //print(json)
+                
+                //for loop over json and write all article titles articles array
+                
+                
+             
+                
+                
+                
+                for (key, subJson) in json["Articles"] {
+                    
+                    
+                    
+                    let author = subJson["title"].string
+                    let subheading = subJson["subheading"].string
+                    let content = subJson["content"].string
+                    let Author = subJson["author"].string
+                    
+                    let stuff = Article(name: author!, subheading: subheading!, content: content!, author: Author!)
+                    
+                    
+                        self.articles.append(stuff!)
+                        
+                        //end iff
+                    
+                    //if let content = subJson["content"].string {
+                    // self.Content.append(content)
+                    
+                    //}
+                    
+                    //end for
+                }
+                // print("\(self.titles)")
+                //print("\(self.Content[0])")
+                //print(self.articles)
+                
+                //set variable to articles number 6 to check append worked
+                let name = self.articles[4].author
+                
+                //print varibale name to check
+                print("\(name)")
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    [unowned self] in
+                    self.tableview.reloadData()
+                    })
+                
+        }
+        
+        }
+    
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        
+        //let num = articles.count
+       // print(num)
+        //return number of rows
+        return articles.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "hello"
+        
+        //let (artTitle) = articles[indexPath.row]
+        
+        // Fetches the appropriate article for the data source layout.
+        let article = articles[indexPath.row]
+        
+        //set cell text label to article name
+        cell.textLabel?.text = article.name
         return cell
     }
     
     
     
-    var authorArray = [String]()
+   /* var authorArray = [String]()
     var titles = [String]()
-    var Content = [String]()
+    var Content = [String]()*/
+    
+    
+   
     
     
     
-    
-    
-    override func viewDidAppear(animated: Bool) {
+    //func viewDidAppear(animated: Bool) {
         
-        Alamofire.request(.GET, "http://178.62.83.50/article.json")
+       /* Alamofire.request(.GET, "http://178.62.83.50/article.json")
             .responseJSON { response in
                 // print(response.request)  // original URL request
                 // print(response.response) // URL response
@@ -59,7 +152,7 @@ class ViewController: UIViewController, UITableViewDataSource{
                 
                 for (key, subJson) in json["Articles"] {
                     if let author = subJson["title"].string {
-                        self.titles.append(author)
+                        self.artTitles.append(author)
                        
                     }
                     if let content = subJson["content"].string {
@@ -100,15 +193,9 @@ class ViewController: UIViewController, UITableViewDataSource{
                 
 
         
-    }
+    }*/
     
-    func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-       
-                
-        }
+    
         
         
         
@@ -138,16 +225,16 @@ class ViewController: UIViewController, UITableViewDataSource{
             print(error);
         }
         */
-        
-
-        
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 
-}
+  
+    //end of class
+    }
+
+
 
